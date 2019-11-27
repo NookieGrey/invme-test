@@ -5,23 +5,36 @@ import {Filter} from "./Filter";
 import {List, AutoSizer} from 'react-virtualized';
 import {debounce} from "../utils/debounce";
 
-import data from "../data/data.json";
 import {ListItem} from "./ListItem";
-
 
 class App extends React.Component {
   state = {
-    filteredData: data
+    filteredData: [],
+    defaultData: [],
   };
+
+  componentDidMount() {
+    let url = process.env.PUBLIC_URL + '/data.json';
+
+    fetch(url)
+      .then(res => res.json())
+      .then((out) => {
+        this.setState({
+          filteredData: out,
+          defaultData: out,
+        })
+      })
+      .catch(err => { console.error(err) });
+  }
 
   filter = debounce((value) => {
     if (!value) {
       this.setState({
-        filteredData: data
+        filteredData: this.state.defaultData
       })
 
     } else {
-      const filteredData = data.filter(item => {
+      const filteredData = this.state.defaultData.filter(item => {
         return (item.name.search(value) !== -1) || ((item.index + "").search(value) !== -1) || (item.description.search(value) !== -1)
       });
 

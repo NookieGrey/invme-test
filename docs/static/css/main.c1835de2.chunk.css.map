@@ -1,0 +1,1 @@
+{"version":3,"sources":["index.css"],"names":[],"mappings":"AAAA,KACI,QAAS,CAKT,uBAJJ,CAOA,UAJI,WAMJ,CAEA,MACI,eACJ","file":"main.c1835de2.chunk.css","sourcesContent":["body {\r\n    margin: 0;\r\n}\r\n\r\nbody {\r\n    height: 100%;\r\n    font-family: Arial, serif;\r\n}\r\n\r\nhtml {\r\n    height: 100%;\r\n}\r\n\r\n#root {\r\n    min-height: 100%;\r\n}"]}
