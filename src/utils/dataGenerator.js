@@ -8,13 +8,15 @@ for (let i =0; i < 100000; i++) {
   })
 }
 
-const fs = require('fs');
+export default data;
 
-fs.writeFile("../../public/data.json", JSON.stringify(data), function(err) {
-
-  if(err) {
-    return console.log(err);
-  }
-
-  console.log("The file was saved!");
-});
+// const fs = require('fs');
+//
+// fs.writeFile("../../public/data.json", JSON.stringify(data), function(err) {
+//
+//   if(err) {
+//     return console.log(err);
+//   }
+//
+//   console.log("The file was saved!");
+// });
