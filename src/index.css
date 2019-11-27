@@ -4,7 +4,7 @@ body {
 
 body {
     height: 100%;
-    font-family: Arial;
+    font-family: Arial, serif;
 }
 
 html {
@@ -13,81 +13,4 @@ html {
 
 #root {
     min-height: 100%;
-}
-
-
-.filter {
-    position: fixed;
-    right: 25px;
-    top: 5px;
-    background: orangered;
-    padding: 10px;
-    display: flex;
-}
-
-.filter .filter-title {
-    color: #ffffff;
-    line-height: 20px;
-    height: 20px;
-}
-
-.filter input {
-    background: #ffffff;
-    border: 1px solid #cccccc;
-    border-radius: 3px;
-    height: 20px;
-    line-height: 20px;
-    margin: 0 10px;
-    outline: none;
-}
-
-.filter button {
-    background: #ffffff;
-    outline: none;
-    border: 1px solid dodgerblue;
-    border-radius: 3px;
-    width: 30px;
-    height: 20px;
-    text-align: center;
-}
-
-.filter.hidden .filter-title {
-    display: none;
-}
-
-.filter.hidden input {
-    display: none;
-}
-
-.list-item {
-    display: flex;
-    flex-direction: row;
-    border-bottom: 1px solid #cccccc;
-    height: 100%;
-}
-.list-item .index {
-    flex: 150px;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    font-size: 25px;
-    font-weight: bolder;
-    margin: 5px 0;
-    margin-left: 5px;
-    border-left: 5px solid orangered;
-}
-.list-item .title {
-    font-size: 18px;
-    font-weight: bold;
-    color: orangered;
-    margin-bottom: 10px;
-}
-.list-item .body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-right: 10px;
-}
-
-.list-item .text {
 }
