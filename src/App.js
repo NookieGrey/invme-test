@@ -47,13 +47,13 @@ class Filter extends React.Component {
   render () {
     return (
       <div className={`${this.state.visible ? "visible" : "hidden"} filter`}>
+        <label htmlFor="search" className="filter-title">
+          filter
+        </label>
+        <input type="search" id="search" onChange={(event) => this.onChange(event.target.value)}/>
         <button onClick={this.toggleVisible}>
           &#128065;
         </button>
-        <label htmlFor="search" className="filter-title">
-          Filter:
-        </label>
-        <input type="search" id="search" onChange={(event) => this.onChange(event.target.value)}/>
       </div>
     )
   }
@@ -61,10 +61,18 @@ class Filter extends React.Component {
 
 function Item(props) {
   return (
-    <div>
-      <div>Name: {props.item.name}</div>
-      <div>Index: {props.item.index}</div>
-      <div>Description: {props.item.description}</div>
+    <div className="list-item">
+      <div className="index">
+        {props.item.index}
+      </div>
+      <div className="body">
+        <div className="title">
+          {props.item.name}
+        </div>
+        <div className="text">
+          {props.item.description}
+        </div>
+      </div>
     </div>
   )
 }
